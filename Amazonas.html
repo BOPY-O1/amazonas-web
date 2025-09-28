@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Las Amazonas</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="#"><img src="logo.jpg" alt="Logo Restaurant Las Amazonas"></a>
+            </div>
+            <div class="navbar-menu">
+                <a href="#quienes-somos">Quiénes Somos</a>
+                <a href="menu.html">Menú</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://wa.me/5217823705403" class="whatsapp-float-btn" target="_blank">
+    <img src="w.png" alt="Contactar por WhatsApp">
+</a>
+</a>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Todos los días</h1>
+                <h2 class="hero-subtitle">DELICIOSO BUFFET</h2>
+                <div class="price-badge">
+                    <span class="price">$165</span>
+                    <span class="per-person">por persona</span>
+                </div>
+                <div class="info-banner">
+                    <div class="info-item">
+                        <h3><span class="icon">🕒</span> Horario</h3>
+                        <p>8:00 AM - 12:30 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h3><span class="icon">📍</span> Dirección</h3>
+                        <p>Calle Nicaragua #308, Col. 27 de Septiembre</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quienes-somos" class="content-section">
+            <h2 class="section-title">Nuestra Esencia</h2>
+            <p class="section-paragraph">
+                En el corazón de la ciudad, Las Amazonas nace de la pasión por la auténtica cocina mexicana. Somos un restaurante familiar dedicado a ofrecer sabores tradicionales en un ambiente festivo y acogedor. Cada platillo en nuestro buffet está preparado con ingredientes frescos y el sazón que nos ha caracterizado por generaciones.
+            </p>
+        </section>
+
+        <section id="menu" class="content-section">
+            <h2 class="section-title">Explora Nuestros Sabores</h2>
+            <div class="menu-container">
+                <div class="menu-card">
+                    <img src="g8.jpg" alt="Buffet de comida mexicana">
+                    <div class="menu-card-overlay">
+                        <h3>El Sabor de México</h3>
+                        <h2>NUESTRO BUFFET</h2>
+                        <a href="menu.html" class="btn-menu">VER MENU</a>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="g9.jpg" alt="Bebidas refrescantes">
+                    <div class="menu-card-overlay">
+                        <h3>Para Refrescarte</h3>
+                        <h2>BARRA DE BEBIDAS</h2>
+                        <a href="menu.html" class="btn-menu">VER MENU</a>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <img src="g6.jpg" alt="Postres tradicionales">
+                     <div class="menu-card-overlay">
+                        <h3>El Toque Dulce</h3>
+                        <h2>POSTRES CASEROS</h2>
+                        <a href="menu.html" class="btn-menu">VER MENU</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="content-section">
+            <h2 class="section-title">Un Vistazo a Las Amazonas</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="g3.jpg" alt="Platillo 1"></div>
+                <div class="gallery-item"><img src="g4.jpg" alt="Ambiente del restaurante"></div>
+                <div class="gallery-item"><img src="g6.jpg" alt="Detalle de comida"></div>
+                <div class="gallery-item"><img src="g7.jpg" alt="Bebida"></div>
+                <div class="gallery-item"><img src="g8.jpg" alt="Tacos"></div>
+                <div class="gallery-item"><img src="g9.jpg" alt="Decoración"></div>
+            </div>
+        </section>
+
+        <section id="contacto" class="content-section">
+    <h2 class="section-title">Contáctanos y Visítanos</h2>
+    <div class="contact-container">
+        
+        <div class="contact-form">
+            <h3>Déjanos tu mensaje</h3>
+            <p class="form-intro">
+                Puedes comunicarte con nosotros por teléfono o WhatsApp. También puedes llenar el formulario y te responderemos a la brevedad.
+            </p>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="contact-details">
+            <div class="contact-info">
+                <h3>Información</h3>
+                <p><strong>Dirección:</strong><br>Calle Nicaragua #308<br>Colonia 27 de Septiembre, Poza Rica, Ver.</p>
+                <p><strong>Teléfono:</strong><br><a href="tel:7823705403">782 370 5403</a></p>
+                <h3>Síguenos</h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/RestaurantLasAmazonas/?locale=es_LA" target="_blank" class="social-icon facebook">f</a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.595493011357!2d-97.4474780239339!3d20.523114502012012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d9c19321453a77%3A0x675f92271844b269!2sC.%20Nicaragua%20308%2C%2027%20de%20Septiembre%2C%2093320%20Poza%20Rica%20de%20Hidalgo%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1726873130985!5m2!1ses-419!2smx" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+    </main>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3 class="footer-title logo-font">Restaurant Las Amazonas</h3>
+            <p>Pasión por la auténtica cocina mexicana. Un restaurante familiar dedicado a ofrecer sabores tradicionales en un ambiente festivo y acogedor.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Explora</h3>
+            <ul class="footer-links">
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto y Ubicación</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Contáctanos</h3>
+            <ul class="footer-contact">
+                <li><span class="icon">📍</span> Calle Nicaragua #308, Col. 27 de Septiembre, Poza Rica, Ver.</li>
+                <li><span class="icon">📞</span> 782 370 5403</li>
+                <li><span class="icon">✉️</span> contacto@lasamazonas.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-title">Síguenos</h3>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/RestaurantLasAmazonas/?locale=es_LA" target="_blank" class="social-icon facebook">f</a>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Restaurant Las Amazonas. Todos los derechos reservados.</p>
+        <p>Hecho por ByteSoft</p>
+    </div>
+</footer>
+
+</body>
+</html>

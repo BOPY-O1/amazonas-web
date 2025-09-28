@@ -1,0 +1,228 @@
+/* --- Variables de Color y Fuentes --- */
+:root {
+    --color-primary: #F7A400; /* Naranja/Amarillo del logo */
+    --color-secondary: #2A3A59; /* Azul oscuro del texto del logo */
+    --color-accent: #d94a4a; /* Rojo para destacar */
+    --color-light: #FFFFFF;
+    --color-dark: #333333;
+    --color-bg: #fefaf0;
+    --font-headings: 'Lilita One', cursive;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+
+/* --- BARRA DE NAVEGACIÓN (AÑADIR ESTE CÓDIGO) --- */
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    z-index: 110; /* Asegura que esté por encima de todo */
+}
+
+.main-nav a {
+    display: inline-block;
+}
+
+.main-nav img {
+    height: 60px; /* Ajusta el tamaño del logo si es necesario */
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1); /* Opcional: un ligero fondo para resaltar */
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.main-nav img:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- Encabezado del Menú (MODIFICAR ESTA REGLA) --- */
+.menu-header {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 100px 20px 40px 20px; /* Cambiado: Aumentar el padding-top */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Necesario para el contexto de la nav bar */
+}
+
+/* --- Estilos Generales --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+}
+
+/* --- Encabezado del Menú --- */
+.menu-header {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    text-align: center;
+    padding: 40px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-header h1 {
+    font-family: var(--font-headings);
+    font-size: 3.5rem;
+    color: var(--color-primary);
+}
+
+/* --- Contenedor de Filtros --- */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--color-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.filter-btn {
+    font-family: var(--font-headings);
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 2px solid var(--color-secondary);
+    background-color: transparent;
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border-color: var(--color-primary);
+}
+
+.filter-btn.active {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+
+/* --- Grid del Menú --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Tarjetas de Platillos --- */
+.menu-item {
+    background-color: var(--color-light);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.menu-item h3 {
+    font-family: var(--font-headings);
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    color: #666;
+    font-size: 0.9rem;
+    flex-grow: 1; /* Empuja el precio hacia abajo */
+    margin-bottom: 15px;
+}
+
+.menu-item .price {
+    font-family: var(--font-headings);
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    align-self: flex-end; /* Alinea el precio a la derecha */
+}
+
+/* --- Estilos Especiales --- */
+.menu-item.highlight {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+.menu-item.highlight h3, .menu-item.highlight .price {
+    color: var(--color-secondary);
+}
+.menu-item.highlight p {
+    color: var(--color-light);
+}
+
+.menu-item.specialty-card {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+.menu-item.specialty-card h3 {
+    color: var(--color-primary);
+}
+
+.specialty-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+.specialty-table th, .specialty-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.specialty-table th {
+    font-family: var(--font-headings);
+    color: var(--color-primary);
+}
+.specialty-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* --- Footer del Menú --- */
+.menu-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f4f4f4;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 600px) {
+    .menu-header h1 { font-size: 2.5rem; }
+    .filter-btn { font-size: 1rem; padding: 8px 18px; }
+}
