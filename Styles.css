@@ -239,6 +239,69 @@ body {
     filter: brightness(1.1);
 }
 
+
+/*
+============================================
+    ESTILOS PARA LA SECCIÓN DE REELS
+============================================
+*/
+
+/* Estilo general para la sección de reels */
+#reels {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff; /* O el color de fondo que prefieras */
+}
+
+/* Contenedor principal de los reels (usa Grid para adaptabilidad) */
+.reels-container {
+    display: grid;
+    /* Columnas automáticas:
+        - Cada columna tendrá un mínimo de 250px.
+        - Se ajustarán para ocupar el espacio disponible (1fr).
+        - En móviles (menos de 560px aprox.) se verá 1 columna.
+        - En tablets (más de 560px) se verán 2 columnas.
+        - En escritorio (más de 840px) se verán 3 o 4 columnas.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* Espacio entre cada reel */
+    max-width: 1200px; /* Ancho máximo para la sección */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 1rem; /* Pequeño padding a los lados */
+}
+
+/* Estilo para cada tarjeta de reel individual */
+.reel-item {
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    overflow: hidden; /* Oculta lo que se salga de los bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Proporción vertical perfecta para un reel (9:16) */
+    aspect-ratio: 9 / 16;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el cursor por encima (solo en escritorio) */
+@media (hover: hover) {
+    .reel-item:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Estilo para la etiqueta de video dentro de la tarjeta */
+.reel-item video {
+    width: 100%;
+    height: 100%;
+    /* El video cubre todo el espacio sin deformarse */
+    object-fit: cover;
+    display: block; /* Elimina espacios extra debajo del video */
+}
+
+
+
+
+
 /* --- NUEVO: Sección Contacto (Actualizada con Formulario) --- */
 .contact-container {
     display: grid;
